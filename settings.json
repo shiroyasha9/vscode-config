@@ -291,5 +291,8 @@
   },
   "editor.accessibilitySupport": "off",
   "everforest.darkWorkbench": "flat",
-  "everforest.italicKeywords": true
+  "everforest.italicKeywords": true,
+  // project manager
+  "projectManager.git.baseFolders": ["$home/Coding"],
+  "projectManager.sortList": "Recent"
 }
