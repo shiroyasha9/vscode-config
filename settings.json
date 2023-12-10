@@ -1,10 +1,11 @@
 {
+  // editor related settings
   "editor.suggestSelection": "first",
   "editor.linkedEditing": true,
-  "editor.mouseWheelScrollSensitivity": 0.8,
-  "editor.lineNumbers": "relative",
+  "editor.mouseWheelScrollSensitivity": 0.8, // mac trackpad issues
+  "editor.lineNumbers": "relative", // for making vim better
   "editor.fontSize": 18,
-  "editor.fontFamily": "'Cascadia Code'",
+  "editor.fontFamily": "CaskaydiaCove Nerd Font, Fira Code",
   "editor.wordWrap": "on",
   "editor.fontLigatures": "'calt', 'ss01'",
   "editor.inlineSuggest.enabled": true,
@@ -12,6 +13,7 @@
   "editor.quickSuggestions": {
     "strings": true
   },
+  // ? Auto organizes the JS/TS imports, however makes file saving slow
   // "editor.codeActionsOnSave": {
   //     "source.organizeImports": true
   // },
@@ -22,7 +24,6 @@
   "editor.guides.bracketPairsHorizontal": "active",
   "window.commandCenter": true,
   "editor.guides.bracketPairs": true,
-  "editor.wordWrapColumn": 110,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.showStatusBar": true,
   "editor.cursorSmoothCaretAnimation": "on",
