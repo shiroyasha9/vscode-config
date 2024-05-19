@@ -72,17 +72,16 @@
   },
   "tailwindCSS.experimental.classRegex": [
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["cva\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
+
   "tailwindCSS.emmetCompletions": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.quoteStyle": "double",
   "javascript.autoClosingTags": true,
   "javascript.suggest.autoImports": true,
-  "[javascript]": {
-    "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
@@ -100,16 +99,24 @@
     "editor.autoClosingBrackets": "always",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "prettier.arrowParens": "avoid",
   "prettier.jsxSingleQuote": false,
   "prettier.trailingComma": "all",
   "prettier.semi": true,
   "prettier.singleQuote": false,
+  "prettier.endOfLine": "auto",
   "gitlens.hovers.currentLine.over": "line",
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": true,
-    "markdown": false,
+    "markdown": true,
     "scminput": false,
     "yaml": false,
     "python": true,
@@ -132,7 +139,9 @@
     "**/pnpm-lock.yaml": true,
     "**/composer.lock": true,
     "**/Gemfile.lock": true,
-    "**/Cargo.lock": true
+    "**/Cargo.lock": true,
+    "**/.expo": true,
+    "**/.next": true
   },
   "notebook.cellToolbarLocation": {
     "default": "right",
@@ -149,10 +158,8 @@
   ],
   "html-css-class-completion.CSSLanguages": ["css", "sass", "scss"],
   "workbench.productIconTheme": "macos-modern",
-  "workbench.startupEditor": "none",
   "vsicons.dontShowNewVersionMessage": true,
   "colorize.languages": ["javascript", "typescript", "html", "css"],
-  "diffEditor.ignoreTrimWhitespace": false,
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -248,6 +255,22 @@
     {
       "before": ["leader", "o"],
       "commands": ["workbench.action.focusSideBar"]
+    },
+    {
+      "before": ["leader", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "f", "w"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["leader", "t", "h"],
+      "commands": ["workbench.action.togglePanel"]
     }
   ],
   "vim.visualModeKeyBindings": [
@@ -275,13 +298,10 @@
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "prettier.endOfLine": "auto",
   "telemetry.telemetryLevel": "off",
   "gitlens.telemetry.enabled": false,
   "terminal.integrated.scrollback": 5000,
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -294,5 +314,9 @@
   "everforest.italicKeywords": true,
   // project manager
   "projectManager.git.baseFolders": ["$home/Coding"],
-  "projectManager.sortList": "Recent"
+  "projectManager.sortList": "Recent",
+  "cursor.cpp.disabledLanguages": ["scminput", "yaml"],
+  "githubPullRequests.upstreamRemote": "never",
+  "workbench.activityBar.orientation": "vertical",
+  "prisma.showPrismaDataPlatformNotification": false
 }

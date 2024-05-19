@@ -77,5 +77,15 @@
   {
     "key": "cmd+o",
     "command": "projectManager.listGitProjects#sideBarGit"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusPanel",
+    "when": "editorTextFocus"
   }
 ]
